@@ -1,0 +1,47 @@
+<%= form_with(model: gungeme, local: true) do |form| %>
+  <% if gungeme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gungeme.errors.count, "error") %> prohibited this gungeme from being saved:</h2>
+
+      <ul>
+      <% gungeme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :machine %>
+    <%= form.number_field :machine %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purpose %>
+    <%= form.number_field :purpose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vc %>
+    <%= form.number_field :vc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friendid %>
+    <%= form.text_field :friendid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

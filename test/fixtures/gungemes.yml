@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  machine: 1
+  purpose: 1
+  vc: 1
+  friendid: MyString
+  comment: MyText
+
+two:
+  name: MyString
+  machine: 1
+  purpose: 1
+  vc: 1
+  friendid: MyString
+  comment: MyText

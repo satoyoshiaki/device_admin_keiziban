@@ -1,0 +1,41 @@
+
+<% if current_user.try(:admin?) %>
+<h1>Gungemes_admin</h1>
+<% else %>
+<h1>Gungemes</h1>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Machine</th>
+      <th>Purpose</th>
+      <th>Vc</th>
+      <th>Friendid</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gungemes.each do |gungeme| %>
+      <tr>
+        <td><%= gungeme.name %></td>
+        <td><%= gungeme.machine %></td>
+        <td><%= gungeme.purpose %></td>
+        <td><%= gungeme.vc %></td>
+        <td><%= gungeme.friendid %></td>
+        <td><%= gungeme.comment %></td>
+        <td><%= link_to 'Show', gungeme %></td>
+        <td><%= link_to 'Edit', edit_gungeme_path(gungeme) %></td>
+        <td><%= link_to 'Destroy', gungeme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gungeme', new_gungeme_path %>

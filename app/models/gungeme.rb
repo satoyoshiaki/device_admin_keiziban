@@ -1,0 +1,2 @@
+class Gungeme < ApplicationRecord
+end
